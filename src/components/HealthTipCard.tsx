@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import { HealthTip } from '../types';
 
 interface HealthTipCardProps {
@@ -7,19 +8,51 @@ interface HealthTipCardProps {
 
 const HealthTipCard: React.FC<HealthTipCardProps> = ({ tip }) => {
   return (
-    <div className="bg-white rounded-lg shadow-md overflow-hidden flex flex-col">
+    <motion.div 
+      className="bg-background rounded-lg shadow-md overflow-hidden flex flex-col h-full border border-light/20"
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      whileHover={{ 
+        y: -5, 
+        boxShadow: "0 15px 30px rgba(0,0,0,0.1)",
+        transition: { duration: 0.2 }
+      }}
+    >
       {tip.imageUrl && (
-        <img 
-          src={tip.imageUrl} 
-          alt={tip.title} 
-          className="w-full h-48 object-cover"
-        />
+        <div className="overflow-hidden">
+          <motion.img 
+            src={tip.imageUrl} 
+            alt={tip.title} 
+            className="w-full h-48 object-cover"
+            whileHover={{ scale: 1.05 }}
+            transition={{ duration: 0.4 }}
+          />
+        </div>
       )}
-      <div className="p-5 flex-grow">
-        <h3 className="text-lg font-bold mb-2">{tip.title}</h3>
-        <p className="text-gray-700">{tip.content}</p>
-      </div>
-    </div>
+      <motion.div 
+        className="p-5 flex-grow bg-gradient-to-b from-background to-light/10"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.2 }}
+      >
+        <motion.h3 
+          className="text-lg font-bold mb-2 text-primary"
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.3 }}
+        >
+          {tip.title}
+        </motion.h3>
+        <motion.p 
+          className="text-dark"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.4 }}
+        >
+          {tip.content}
+        </motion.p>
+      </motion.div>
+    </motion.div>
   );
 };
 

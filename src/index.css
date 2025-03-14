@@ -2,6 +2,187 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --color-primary: #586159;
+  --color-secondary: #626265;
+  --color-accent: #A6685B;
+  --color-background: #E5E5DD;
+  --color-dark: #171D26;
+  --color-light: #AEB0A9;
+}
+
 body {
-  @apply bg-gray-50;
+  @apply bg-background text-dark;
+}
+
+/* Add styling for markdown content */
+.prose h2 {
+  @apply text-2xl font-bold mt-8 mb-4 text-primary;
+  scroll-margin-top: 100px; /* Add space for fixed header when scrolling to anchors */
+}
+
+.prose h3 {
+  @apply text-xl font-semibold mt-6 mb-3 text-primary;
+  scroll-margin-top: 100px; /* Add space for fixed header when scrolling to anchors */
+}
+
+.prose p {
+  @apply mb-4 text-dark;
+}
+
+.prose ul {
+  @apply list-disc pl-5 mb-4;
+}
+
+.prose ol {
+  @apply list-decimal pl-5 mb-4;
+}
+
+.prose li {
+  @apply mb-2;
+}
+
+.prose a {
+  @apply text-accent hover:underline;
+}
+
+.prose blockquote {
+  @apply pl-4 border-l-4 border-accent/30 italic;
+}
+
+/* Fix for code blocks overflowing in articles */
+.prose pre {
+  @apply overflow-x-auto max-w-full bg-dark/5 p-4 rounded-md my-6 border border-light/20;
+  -webkit-overflow-scrolling: touch;
+}
+
+.prose code {
+  @apply bg-dark/5 px-1 py-0.5 rounded text-primary font-mono text-sm;
+}
+
+.prose pre > code {
+  @apply bg-transparent p-0 text-dark;
+  white-space: pre;
+  word-wrap: normal;
+  overflow-wrap: normal;
+}
+
+/* Improve code block appearance */
+.prose pre::-webkit-scrollbar {
+  height: 6px;
+}
+
+.prose pre::-webkit-scrollbar-thumb {
+  @apply bg-light/60 rounded-full;
+}
+
+.prose pre::-webkit-scrollbar-track {
+  @apply bg-light/20 rounded-full;
+}
+
+/* TOC animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.toc-active {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Smooth transitions */
+.article-content h2, .article-content h3 {
+  transition: background-color 0.3s ease;
+}
+
+/* Active section highlighting */
+.article-content h2[id].toc-visible {
+  @apply bg-accent/5 -mx-2 px-2 py-1 rounded-md;
+  transition: background-color 0.5s ease;
+}
+
+/* TOC container styles */
+.toc-container {
+  position: sticky;
+  top: 1rem;
+  max-height: calc(100vh - 2rem);
+}
+
+/* Scrollbar styling for TOC */
+.max-h-\[calc\(100vh-150px\)\]::-webkit-scrollbar {
+  width: 4px;
+}
+
+.max-h-\[calc\(100vh-150px\)\]::-webkit-scrollbar-track {
+  @apply bg-light/30;
+  border-radius: 10px;
+}
+
+.max-h-\[calc\(100vh-150px\)\]::-webkit-scrollbar-thumb {
+  @apply bg-primary/50;
+  border-radius: 10px;
+}
+
+.max-h-\[calc\(100vh-150px\)\]::-webkit-scrollbar-thumb:hover {
+  @apply bg-primary;
+}
+
+/* Ensure link colors are properly defined */
+.text-accent {
+  color: var(--color-accent) !important;
+}
+
+/* Fix for link visibility */
+a.text-accent, button.text-accent {
+  position: relative;
+  z-index: 10;
+  display: inline-flex;
+  align-items: center;
+}
+
+/* Button and card styles */
+.btn {
+  @apply bg-accent text-background hover:bg-accent/90 font-medium py-2 px-4 rounded transition duration-200;
+}
+
+.card {
+  @apply bg-background shadow-md rounded-lg border border-light/20;
+}
+
+/* Line clamp utility for truncating text */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+/* Interview TOC scrollbar styling */
+.max-h-\[calc\(100vh-200px\)\]::-webkit-scrollbar {
+  width: 3px;
+}
+
+.max-h-\[calc\(100vh-200px\)\]::-webkit-scrollbar-track {
+  @apply bg-light/20;
+  border-radius: 10px;
+}
+
+.max-h-\[calc\(100vh-200px\)\]::-webkit-scrollbar-thumb {
+  @apply bg-accent/40;
+  border-radius: 10px;
+}
+
+.max-h-\[calc\(100vh-200px\)\]::-webkit-scrollbar-thumb:hover {
+  @apply bg-accent/60;
+}
+
+/* Interview question/answer highlighting */
+@keyframes pulse-bg {
+  0% { background-color: rgba(166, 104, 91, 0.2); }
+  50% { background-color: rgba(166, 104, 91, 0.1); }
+  100% { background-color: rgba(166, 104, 91, 0); }
+}
+
+.highlight-qa {
+  animation: pulse-bg 2s ease-out forwards;
 }

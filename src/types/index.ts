@@ -8,6 +8,7 @@ export interface Article {
   imageUrl?: string;
   category: 'economy' | 'health' | 'research';
   tags?: string[];
+  references?: string[]; // Added references array for APA citations
 }
 
 export interface Interview {
