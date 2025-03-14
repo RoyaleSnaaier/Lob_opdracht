@@ -1,0 +1,34 @@
+import React from 'react';
+import { Routes, Route } from 'react-router-dom';
+import Layout from './components/Layout/Layout';
+import HomePage from './pages/HomePage';
+import ArticlesPage from './pages/ArticlesPage';
+import ArticleDetailPage from './pages/ArticleDetailPage';
+import InterviewsPage from './pages/InterviewsPage';
+import InterviewDetailPage from './pages/InterviewDetailPage';
+import AdvertisementsPage from './pages/AdvertisementsPage';
+import HealthPage from './pages/HealthPage';
+import ResearchPage from './pages/ResearchPage';
+import QuizPage from './pages/QuizPage';
+import ReferencesPage from './pages/ReferencesPage';
+
+const App: React.FC = () => {
+  return (
+    <Layout>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/articles" element={<ArticlesPage />} />
+        <Route path="/articles/:id" element={<ArticleDetailPage />} />
+        <Route path="/interviews" element={<InterviewsPage />} />
+        <Route path="/interviews/:id" element={<InterviewDetailPage />} />
+        <Route path="/advertisements" element={<AdvertisementsPage />} />
+        <Route path="/health" element={<HealthPage />} />
+        <Route path="/research" element={<ResearchPage />} />
+        <Route path="/quiz" element={<QuizPage />} />
+        <Route path="/references" element={<ReferencesPage />} />
+      </Routes>
+    </Layout>
+  );
+};
+
+export default App;
