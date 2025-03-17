@@ -4,7 +4,6 @@ import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import ArticleCard from '../components/ArticleCard';
 import InterviewCard from '../components/InterviewCard';
-import AdvertisementSlider from '../components/AdvertisementSlider';
 import SidebarAd from '../components/SidebarAd';
 import SidebarNewsletter from '../components/SidebarNewsletter';
 import { articles } from '../data/articles';

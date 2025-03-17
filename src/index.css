@@ -210,3 +210,7 @@ a.text-accent, button.text-accent {
 .highlight-qa {
   animation: pulse-bg 2s ease-out forwards;
 }
+
+body{
+  scroll-behavior: smooth;  
+}
