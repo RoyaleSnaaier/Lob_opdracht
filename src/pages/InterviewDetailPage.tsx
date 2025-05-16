@@ -32,7 +32,7 @@ const InterviewDetailPage: React.FC = () => {
       const line = lines[i].trim();
       if (!line) continue;
       
-      if (line.startsWith('Q:')) {
+      if (line.startsWith('Q:') || line.startsWith('V:')) {
         formatted.push({ type: 'question', content: line.substring(2).trim() });
       } else if (line.startsWith('A:')) {
         formatted.push({ type: 'answer', content: line.substring(2).trim() });
@@ -123,20 +123,20 @@ const InterviewDetailPage: React.FC = () => {
       {/* Hero Section with Parallax */}
       <div className="relative h-[50vh] min-h-[400px] mb-12 overflow-hidden rounded-lg ">
         {interview.imageUrl && (
-          <motion.div
+            <motion.div
             className="absolute inset-0 z-0"
             style={{ 
               scale,
               opacity 
             }}
-          >
+            >
             <div className="absolute inset-0 bg-gradient-to-b from-dark/50 to-dark/80 mix-blend-multiply z-10" />
             <img 
               src={interview.imageUrl} 
               alt={interview.title} 
-              className="absolute inset-0 w-full h-full object-cover"
+              className="absolute inset-0 w-full h-full object-cover object-[center_35%]"
             />
-          </motion.div>
+            </motion.div>
         )}
         
         <motion.div 
@@ -165,7 +165,7 @@ const InterviewDetailPage: React.FC = () => {
                   clipRule="evenodd" 
                 />
               </svg>
-              Back to interviews
+              Terug naar interviews
             </Link>
           </motion.div>
           
@@ -245,11 +245,11 @@ const InterviewDetailPage: React.FC = () => {
                   {firstName.charAt(0)}{lastName.charAt(0)}
                 </div>
                 <div>
-                  <h2 className="text-xl font-bold text-primary mb-1 text-center sm:text-left">About {interview.interviewee}</h2>
+                  <h2 className="text-xl font-bold text-primary mb-1 text-center sm:text-left">Over {interview.interviewee}</h2>
                   <p className="text-secondary mb-3 text-center sm:text-left">{interview.role}</p>
                   <p className="text-dark">
-                    {interview.interviewee} is a distinguished expert in their field with extensive experience and insights to share. 
-                    This interview explores their unique perspectives and contributions to the industry.
+                    {interview.interviewee} is een vooraanstaande expert op hun vakgebied met uitgebreide ervaring en inzichten om te delen. 
+                    Dit interview verkent hun unieke perspectieven en bijdragen aan de industrie.
                   </p>
                 </div>
               </motion.div>
@@ -271,7 +271,7 @@ const InterviewDetailPage: React.FC = () => {
                     >
                       {item.type === 'question' ? (
                         <div className="flex items-start gap-4 mb-4">
-                          <div className="bg-primary text-background rounded-full h-8 w-8 flex items-center justify-center flex-shrink-0 mt-1">Q</div>
+                          <div className="bg-primary text-background rounded-full h-8 w-8 flex items-center justify-center flex-shrink-0 mt-1">V</div>
                           <div className="font-medium text-lg text-primary">{item.content}</div>
                         </div>
                       ) : (
@@ -294,9 +294,9 @@ const InterviewDetailPage: React.FC = () => {
                 transition={{ duration: 0.5 }}
               >
                 <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
-                  <p className="font-bold text-primary">Share this interview</p>
+                  <p className="font-bold text-primary">Deel dit interview</p>
                   <div className="flex space-x-4">
-                    {['Twitter', 'Facebook', 'LinkedIn', 'Email'].map((platform) => (
+                    {['Twitter', 'Facebook', 'LinkedIn', 'E-mail'].map((platform) => (
                       <motion.button
                         key={platform}
                         className="px-4 py-2 bg-background border border-light/30 rounded-md text-sm text-dark hover:bg-light/10"
@@ -317,7 +317,7 @@ const InterviewDetailPage: React.FC = () => {
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: true }}
               >
-                <h2 className="text-2xl font-bold text-primary mb-8">Related Interviews</h2>
+                <h2 className="text-2xl font-bold text-primary mb-8">Gerelateerde Interviews</h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   {relatedInterviews.map((relInterview) => (
                     <InterviewCard key={relInterview.id} interview={relInterview} />
@@ -340,7 +340,7 @@ const InterviewDetailPage: React.FC = () => {
                   <svg className="w-5 h-5 mr-2 text-accent" viewBox="0 0 20 20" fill="currentColor">
                     <path fillRule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 6a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 6a1 1 0 011-1h7a1 1 0 110 2H4a1 1 0 01-1-1z" clipRule="evenodd" />
                   </svg>
-                  In This Interview
+                  In Dit Interview
                 </motion.h3>
                 
                 <div className="max-h-[calc(100vh-200px)] overflow-y-auto pr-2 space-y-1">
@@ -386,7 +386,7 @@ const InterviewDetailPage: React.FC = () => {
                     <svg className="w-4 h-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 11l7-7 7 7M5 19l7-7 7 7" />
                     </svg>
-                    Back to top
+                    Terug naar boven
                   </motion.button>
                 </motion.div>
               </div>

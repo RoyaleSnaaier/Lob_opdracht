@@ -164,7 +164,7 @@ const Quiz: React.FC<QuizProps> = ({ questions }) => {
           </motion.h2>
           
           <div className="space-y-3 mb-6">
-            {currentQuestion.options.map((option, index) => (
+            {currentQuestion.options.map((option: string, index: number) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 10 }}

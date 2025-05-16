@@ -9,14 +9,14 @@ const SidebarNewsletter: React.FC = () => {
     e.preventDefault();
     if (email) {
       setSubmitted(true);
-      // In a real app, you would send this to an API
-      console.log('Newsletter signup:', email);
+      // In een echte app zou je dit naar een API sturen
+      console.log('Nieuwsbrief aanmelding:', email);
     }
   };
   
   return (
     <div className="bg-background rounded-lg shadow-md overflow-hidden border border-light/20">
-      <h3 className="bg-primary text-white py-2 px-4 font-medium">Stay Updated</h3>
+      <h3 className="bg-primary text-white py-2 px-4 font-medium">Blijf op de Hoogte</h3>
       
       <div className="p-4">
         {submitted ? (
@@ -29,19 +29,19 @@ const SidebarNewsletter: React.FC = () => {
             <svg className="w-12 h-12 mx-auto text-accent mb-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
             </svg>
-            <p className="text-primary font-medium">Thanks for subscribing!</p>
-            <p className="text-sm text-secondary mt-1">We'll keep you informed about the latest articles and updates.</p>
+            <p className="text-primary font-medium">Bedankt voor je aanmelding!</p>
+            <p className="text-sm text-secondary mt-1">We houden je op de hoogte van de laatste artikelen en updates.</p>
           </motion.div>
         ) : (
           <>
             <p className="text-dark text-sm mb-3">
-              Subscribe to our newsletter for weekly updates on economics, health, and sustainability.
+              Abonneer je op onze nieuwsbrief voor wekelijkse updates over economie, gezondheid en duurzaamheid.
             </p>
             <form onSubmit={handleSubmit}>
               <div className="mb-2">
                 <input
                   type="email"
-                  placeholder="Your email address"
+                  placeholder="Jouw e-mailadres"
                   className="w-full p-2 border border-light rounded-md text-sm"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
@@ -54,7 +54,7 @@ const SidebarNewsletter: React.FC = () => {
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
               >
-                Subscribe
+                Abonneren
               </motion.button>
             </form>
           </>

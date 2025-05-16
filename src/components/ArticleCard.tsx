@@ -8,7 +8,50 @@ interface ArticleCardProps {
   article: Article;
 }
 
+// Helper functie voor categorie kleur en label
+const getCategoryInfo = (category: string) => {
+  switch (category.toLowerCase()) {
+    case 'economy':
+    case 'economie':
+      return { 
+        color: 'bg-blue-100 text-blue-800',
+        label: 'Economische dimensie'
+      };
+    case 'gezondheid':
+    case 'health':
+      return { 
+        color: 'bg-green-100 text-green-800',
+        label: 'Vitaal burgerschap'
+      };
+    case 'sociaal':
+    case 'social':
+      return { 
+        color: 'bg-purple-100 text-purple-800',
+        label: 'Sociale dimensie'
+      };
+    case 'politiek':
+    case 'political':
+      return { 
+        color: 'bg-red-100 text-red-800',
+        label: 'Politieke dimensie'
+      };
+    case 'recensies':
+    case 'reviews':
+      return { 
+        color: 'bg-orange-100 text-orange-800',
+        label: 'Recensies'
+      };
+    default:
+      return { 
+        color: 'bg-gray-100 text-gray-800',
+        label: category.charAt(0).toUpperCase() + category.slice(1)
+      };
+  }
+};
+
 const ArticleCard: React.FC<ArticleCardProps> = ({ article }) => {
+  const categoryInfo = getCategoryInfo(article.category);
+
   return (
     <motion.div 
       className="bg-background rounded-lg shadow-md overflow-hidden flex flex-col h-full border border-light/20"
@@ -18,7 +61,7 @@ const ArticleCard: React.FC<ArticleCardProps> = ({ article }) => {
       transition={{ type: "spring", stiffness: 400, damping: 17 }}
     >
       {article.imageUrl && (
-        <div className="overflow-hidden h-48 flex-shrink-0">
+        <div className="overflow-hidden h-48 flex-shrink-0 relative">
           <motion.img 
             src={article.imageUrl} 
             alt={article.title} 
@@ -26,6 +69,10 @@ const ArticleCard: React.FC<ArticleCardProps> = ({ article }) => {
             whileHover={{ scale: 1.05 }}
             transition={{ duration: 0.4 }}
           />
+          {/* Categorie badge toevoegen */}
+          <span className={`absolute top-3 right-3 text-xs font-medium px-2.5 py-1 rounded ${categoryInfo.color}`}>
+            {categoryInfo.label}
+          </span>
         </div>
       )}
       <div className="p-5 flex flex-col flex-grow">

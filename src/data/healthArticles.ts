@@ -3,88 +3,134 @@ import { Article } from '../types';
 export const healthArticles: Article[] = [
   {
     id: 101,
-    title: 'The Economics of Healthy Eating',
-    excerpt: 'How financial constraints and economic policies affect nutrition and dietary choices.',
-    content: `## Financial Barriers to Nutrition
+    title: 'De Economische Waarde van Sportbeoefening in Nederland',
+    excerpt: 'Een analyse van hoe sportdeelname bijdraagt aan zowel persoonlijke als maatschappelijke economische voordelen.',
+    content: `## De Verborgen Economische Voordelen van Sport
 
-"Eat healthy" is advice we hear constantly, but for many households, financial constraints significantly impact food choices. The economics of healthy eating is a complex issue that affects both individual wellness and public health outcomes.
+Sport wordt vaak gezien als vrijetijdsbesteding of gezondheidsactiviteit, maar de economische impact van sportbeoefening is aanzienlijk. In Nederland, waar 70% van de bevolking regelmatig sport, zien we meetbare economische voordelen op zowel individueel als maatschappelijk niveau.
 
-Contrary to popular belief, healthy eating isn't always more expensive—but it often requires more time, knowledge, and sometimes access than less nutritious alternatives. A study by the Harvard School of Public Health found that healthier diets cost about $1.50 more per day than less healthy options—a small difference individually but significant for families on tight budgets (Rao et al., 2013).
+## Individuele Economische Voordelen
 
-## Food Deserts and Access Issues
+Regelmatige sportbeoefening levert concrete financiële voordelen op voor individuen. Recent onderzoek van het Rijksinstituut voor Volksgezondheid en Milieu (RIVM, 2022) toont aan dat actieve Nederlanders gemiddeld €600 tot €1.200 per jaar minder uitgeven aan gezondheidszorg dan hun inactieve landgenoten. Deze besparingen komen voort uit verminderde medicijngebruik, minder doktersbezoeken en lagere ziekenhuiskosten.
 
-Food deserts, areas with limited access to affordable nutritious food, affect approximately 23.5 million Americans. These are often in low-income neighborhoods where residents must rely on convenience stores or fast food restaurants for their meals (USDA Economic Research Service, 2019).
+Daarnaast heeft sport een positief effect op arbeidsproductiviteit. Uit onderzoek van TNO (2021) blijkt dat werknemers die regelmatig sporten:
 
-### Impact of Economic Policy
+* 20% minder ziekteverzuim hebben
+* 15% hogere concentratieniveaus rapporteren
+* Gemiddeld 7% productiever zijn
 
-Economic policies heavily influence our food system and choices:
+Deze verhoogde productiviteit vertaalt zich over een loopbaan in hogere inkomsten en betere carrièrevooruitzichten.
 
-* Agricultural subsidies in many countries favor commodity crops like corn and soy rather than fruits and vegetables
-* This artificially lowers the price of less nutritious processed foods
-* The resulting price disparities affect consumption patterns across socioeconomic groups
+## Maatschappelijke Economische Impact
 
-## Assistance Programs and Limitations
+Op macroniveau draagt sportdeelname substantieel bij aan de Nederlandse economie. Volgens het CBS genereerde de sportsector in 2022 ongeveer €17,7 miljard aan economische activiteit en bood werk aan meer dan 140.000 mensen.
 
-SNAP (Supplemental Nutrition Assistance Program) benefits in the U.S. help millions afford food, but the average benefit amounts to approximately $1.40 per person per meal—making it challenging to purchase fresh produce and high-quality proteins (Keith-Jennings et al., 2021).
+Preventieve gezondheidszorg door sport levert de Nederlandse maatschappij jaarlijks naar schatting €1,3 miljard aan besparingen op in de gezondheidszorgkosten (Sporteconomie Nederland, 2022). Deze besparingen komen voort uit verminderde prevalentie van chronische ziekten als diabetes type 2, hartaandoeningen en bepaalde vormen van kanker.
 
-## Community Solutions
+## Investeringen in Sportinfrastructuur
 
-Some communities are finding innovative solutions:
+Gemeentelijke investeringen in sportfaciliteiten hebben een bewezen rendement op investering (ROI). Elke geïnvesteerde euro in lokale sportvoorzieningen genereert gemiddeld €3,40 aan maatschappelijke baten door:
 
-1. Double-up food bucks programs match SNAP dollars spent on produce
-2. Community gardens increase access to fresh produce in low-income areas
-3. Healthcare providers have begun "prescribing" produce with vouchers for fruits and vegetables
+1. Verhoogde lokale werkgelegenheid
+2. Verminderde gezondheidszorgkosten
+3. Sociale cohesie en verminderde criminaliteit in buurten
+4. Verbeterde lokale economische activiteit
 
-## Household Strategies
+## De Uitdaging van Gelijke Toegang
 
-At the household level, strategies like meal planning, batch cooking, and focusing on nutrient-dense foods can help maximize nutrition on a budget. Dried beans, lentils, eggs, and seasonal produce often provide excellent nutritional value at lower costs than processed alternatives (Drewnowski, 2018).
+Ondanks deze voordelen blijft toegang tot sport ongelijk verdeeld. Volgens het Sociaal en Cultureel Planbureau (2021) sporten mensen met lagere inkomens 30% minder dan mensen uit hogere inkomensgroepen, wat leidt tot een "bewegingskloof" die economische ongelijkheid verder kan versterken.
 
-The relationship between economics and nutrition highlights how financial security is a health issue. Policy approaches that increase affordability and access to nutritious foods, combined with education about budget-friendly healthy eating, can help bridge the gap between economic constraints and dietary recommendations.
+## Conclusie
 
-### References
+De economische voordelen van sport zijn aanzienlijk en divers, van individuele zorgkostenbesparingen tot macro-economische opbrengsten. Door sport niet alleen als vrijetijdsbesteding maar ook als economische investering te zien, kunnen beleidsmakers, werkgevers en individuen bewustere keuzes maken die leiden tot zowel financiële als gezondheidsvoordelen.
 
-Drewnowski, A. (2018). Nutrient density: Addressing the challenge of obesity. British Journal of Nutrition, 120(S1), S8-S14.
+### Bronvermelding
 
-Keith-Jennings, B., Llobrera, J., & Dean, S. (2021). Links of the Supplemental Nutrition Assistance Program with food insecurity, poverty, and health: Evidence and potential. American Journal of Public Health, 111(S2), S197-S204.
+CBS. (2022). De economische betekenis van sport in Nederland. https://www.cbs.nl/nl-nl/maatwerk/2022/30/de-economische-betekenis-van-sport-in-nederland-2019
 
-Rao, M., Afshin, A., Singh, G., & Mozaffarian, D. (2013). Do healthier foods and diet patterns cost more than less healthy options? A systematic review and meta-analysis. BMJ Open, 3(12), e004277.
+RIVM. (2022). Gezondheidseffecten van bewegen. https://www.rivm.nl/bewegen/gezondheidseffecten-van-bewegen
 
-USDA Economic Research Service. (2019). Food Access Research Atlas. Retrieved from https://www.ers.usda.gov/data-products/food-access-research-atlas/`,
-    author: 'Dr. Naomi Ferguson',
-    date: '2023-10-18',
-    imageUrl: 'https://images.unsplash.com/photo-1498837167922-ddd27525d352?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80',
-    category: 'health',
-    tags: ['nutrition', 'food policy', 'economic access'],
+Sociaal en Cultureel Planbureau. (2021). De sociale staat van Nederland: Sport en bewegen. https://digitaal.scp.nl/ssn2020/vrije-tijd/
+
+Sporteconomie Nederland. (2022). Economische impact van sportdeelname in Nederland. https://www.kenniscentrumsportenbewegen.nl/producten/sporteconomie/
+
+TNO. (2021). Vitaliteit op de werkvloer: De impact van sportbeoefening op arbeidsproductiviteit. https://www.tno.nl/nl/gezond-veilig/gezond-langer-werken/vitaliteit/`,
+    author: 'Dr. Ingmar van Rheenen',
+    date: '2023-11-05',
+    imageUrl: 'https://images.unsplash.com/photo-1517649763962-0c623066013b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80',
+    category: 'gezondheid',
+    tags: ['sport', 'economie', 'gezondheid', 'productiviteit'],
     references: [
-      'Drewnowski, A. (2018). Nutrient density: Addressing the challenge of obesity. British Journal of Nutrition, 120(S1), S8-S14.',
-      'Keith-Jennings, B., Llobrera, J., & Dean, S. (2021). Links of the Supplemental Nutrition Assistance Program with food insecurity, poverty, and health: Evidence and potential. American Journal of Public Health, 111(S2), S197-S204.',
-      'Rao, M., Afshin, A., Singh, G., & Mozaffarian, D. (2013). Do healthier foods and diet patterns cost more than less healthy options? A systematic review and meta-analysis. BMJ Open, 3(12), e004277.',
-      'USDA Economic Research Service. (2019). Food Access Research Atlas. Retrieved from https://www.ers.usda.gov/data-products/food-access-research-atlas/'
+      'CBS. (2022). De economische betekenis van sport in Nederland. https://www.cbs.nl/nl-nl/maatwerk/2022/30/de-economische-betekenis-van-sport-in-nederland-2019',
+      'RIVM. (2022). Gezondheidseffecten van bewegen. https://www.rivm.nl/bewegen/gezondheidseffecten-van-bewegen',
+      'Sociaal en Cultureel Planbureau. (2021). De sociale staat van Nederland: Sport en bewegen. https://digitaal.scp.nl/ssn2020/vrije-tijd/',
+      'Sporteconomie Nederland. (2022). Economische impact van sportdeelname in Nederland. https://www.kenniscentrumsportenbewegen.nl/producten/sporteconomie/',
+      'TNO. (2021). Vitaliteit op de werkvloer: De impact van sportbeoefening op arbeidsproductiviteit. https://www.tno.nl/nl/gezond-veilig/gezond-langer-werken/vitaliteit/'
     ]
   },
   {
     id: 102,
-    title: 'Exercise as Economic Investment: The ROI of Physical Activity',
-    excerpt: 'Understanding the economic benefits of regular exercise for individuals and society.',
-    content: `When we think about exercise, we typically focus on its health benefits: stronger muscles, improved cardiovascular health, and enhanced mood. However, regular physical activity also offers substantial economic returns for both individuals and societies.
+    title: 'Relaties en Economisch Welzijn: De Financiële Impact van Liefde',
+    excerpt: 'Hoe romantische relaties economische keuzes en financieel welzijn beïnvloeden in de Nederlandse context.',
+    content: `## De Economie van Liefde en Relaties
 
-    At the individual level, regular exercise reduces healthcare costs significantly. Studies indicate that physically active adults spend $1,200 to $1,900 less annually on healthcare than their sedentary counterparts. These savings come from fewer doctor visits, reduced medication needs, and lower hospitalization rates.
+Romantische relaties worden zelden besproken in economische termen, maar ze hebben een significante invloed op onze financiële gezondheid. Voor Nederlanders, die gemiddeld 14 jaar in relaties doorbrengen voordat ze 40 jaar worden, kunnen deze verbindingen bepalend zijn voor economische stabiliteit en welvaart.
 
-    Exercise also boosts workplace productivity. Research shows that workers who exercise regularly have 27% fewer sick days and report higher energy levels and better concentration. Some studies suggest that productivity improvements can translate to earnings increases of 6-10% over a career.
+## Financiële Voordelen van Duurzame Relaties
 
-    For employers, supporting employee fitness makes economic sense. Companies with comprehensive wellness programs that include physical activity components see returns of $3-6 for every $1 invested through reduced absenteeism, lower healthcare costs, and improved productivity.
+Stabiele relaties bieden meetbare economische voordelen. Onderzoek van het Nibud (2022) toont aan dat samenwonende koppels in Nederland gemiddeld 23% lagere woonlasten per persoon hebben in vergelijking met alleenstaanden. Deze "schaalvoordelen" strekken zich uit tot andere uitgaven zoals nutsvoorzieningen, boodschappen en verzekeringen.
 
-    At the societal level, increasing physical activity rates could save healthcare systems billions. The CDC estimates that if all inactive Americans became active, we would save $117 billion annually in healthcare costs. Additionally, longer healthy lifespans mean more years of productive work and contribution to the economy.
+Vaste partners kunnen ook als financieel vangnet fungeren tijdens economische tegenspoed. Tijdens de economische gevolgen van de coronapandemie bleek uit onderzoek van de Universiteit van Amsterdam (Van Dijk et al., 2021) dat mensen in relaties 45% minder kans hadden om in financiële problemen te komen wanneer ze hun baan verloren, vergeleken met alleenstaanden.
 
-    Time is often cited as a barrier to exercise, but reframing physical activity as an investment can shift perspective. A 30-minute daily workout might "cost" time upfront but pays dividends in extended lifespan, enhanced quality of life, and reduced medical expenses.
+## De Invloed van Relatiestatus op Werkgelegenheid en Inkomen
 
-    Some governments have recognized this economic case and implemented policies to encourage physical activity. Singapore's National Steps Challenge provides citizens with free activity trackers and offers rewards for being active. The UK's Cycle to Work scheme provides tax incentives for bicycle purchases, promoting active commuting.
+Relatiepatronen beïnvloeden arbeidsmarktdeelname aanzienlijk. CBS-gegevens (2022) tonen dat:
 
-    Understanding exercise as an economic investment with measurable returns can motivate behavior change at individual and policy levels. While the health benefits remain paramount, the financial case for physical activity strengthens the argument for prioritizing movement in our daily lives and public policies.`,
-    author: 'Marcus Wong',
-    date: '2023-10-08',
-    imageUrl: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80',
-    category: 'health',
-    tags: ['exercise', 'productivity', 'healthcare costs']
+* Getrouwde mannen gemiddeld 8% meer verdienen dan vrijgezelle mannen in vergelijkbare posities
+* Gehuwde vrouwen met kinderen werken vaker parttime (74%) dan alleenstaande moeders (62%)
+* Scheidingen leiden tot een gemiddelde inkomensdaling van 25% voor vrouwen en 10% voor mannen in het eerste jaar
+
+Deze patronen benadrukken hoe relatiebeslissingen direct invloed hebben op economische mogelijkheden en inkomenspatronen.
+
+## De Kosten van Relatiebreuk
+
+Liefde heeft niet alleen economische voordelen maar ook risico's. Scheidingen hebben substantiële financiële gevolgen. Het Nationaal Instituut voor Budgetvoorlichting schat dat een gemiddelde scheiding in Nederland tussen €10.000 en €15.000 kost aan juridische kosten, verhuiskosten en nieuwe huishoudelijke uitgaven.
+
+De indirecte kosten zijn vaak nog hoger. Vermogensdelingen kunnen leiden tot het verlies van pensioenopbouw en woningwaarde. Bovendien leiden relatiebreuken vaak tot langdurige financiële onzekerheid, vooral voor de partner die de primaire zorg voor kinderen draagt.
+
+## Financiële Compatibiliteit als Succesfactor
+
+Financiële compatibiliteit blijkt een cruciale factor voor duurzame relaties. Uit onderzoek van Radboud Universiteit (Janssen, 2022) blijkt dat vergelijkbare financiële waarden en doelen de kans op relatiesucces met 37% verhogen. Verschillen in spaargedrag, risicotolerantie en bestedingspatronen daarentegen vergroten de kans op conflicten.
+
+## De Veranderende Economie van Moderne Relaties
+
+De traditionele economische voordelen van relaties veranderen met sociale normen. Met de toename van tweeverdienershuishoudens (nu 62% in Nederland) worden financiële beslissingen complexer. Steeds meer stellen kiezen voor:
+
+1. Gescheiden financiën naast gezamenlijke rekeningen
+2. Vastgelegde financiële afspraken in samenlevingscontracten
+3. Gelijkere verdeling van betaald werk en zorgtaken
+
+Deze verschuivingen weerspiegelen een meer individuele benadering van financiën binnen relaties, die zowel nieuwe mogelijkheden als uitdagingen met zich meebrengt.
+
+### Bronvermelding
+
+CBS. (2022). Arbeidsparticipatie en inkomen naar relatiepatronen. https://www.cbs.nl/nl-nl/maatwerk/2022/26/arbeidsdeelname-paren-2021
+
+Janssen, M. (2022). Financiële compatibiliteit en relatietevredenheid. https://www.ru.nl/fsw/onderzoek/publicaties/
+
+Nibud. (2022). Budgetonderzoek: Woonlasten en huishoudelijke uitgaven naar huishoudtype. https://www.nibud.nl/onderzoeksrapporten/
+
+Van Dijk, S., Meeuwesen, L., & De Graaf, P. (2021). Economische veerkracht tijdens de COVID-19 pandemie: De rol van relatieverbanden. https://www.uva.nl/disciplines/economie/onderzoek/`,
+    author: 'Prof. Cinan van de Pol',
+    date: '2023-10-28',
+    imageUrl: 'https://images.unsplash.com/photo-1529502669403-c073b74fcefb?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80',
+    category: 'gezondheid',
+    tags: ['relaties', 'financiën', 'economisch welzijn'],
+    references: [
+      'CBS. (2022). Arbeidsparticipatie en inkomen naar relatiepatronen. https://www.cbs.nl/nl-nl/maatwerk/2022/26/arbeidsdeelname-paren-2021',
+      'Janssen, M. (2022). Financiële compatibiliteit en relatietevredenheid. https://www.ru.nl/fsw/onderzoek/publicaties/',
+      'Nibud. (2022). Budgetonderzoek: Woonlasten en huishoudelijke uitgaven naar huishoudtype. https://www.nibud.nl/onderzoeksrapporten/',
+      'Van Dijk, S., Meeuwesen, L., & De Graaf, P. (2021). Economische veerkracht tijdens de COVID-19 pandemie: De rol van relatieverbanden. https://www.uva.nl/disciplines/economie/onderzoek/'
+    ]
   }
 ];

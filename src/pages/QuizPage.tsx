@@ -17,9 +17,9 @@ const QuizPage: React.FC = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
       >
-        <h1 className="text-3xl font-bold mb-2 text-primary">Consumer Behavior Quiz</h1>
+        <h1 className="text-3xl font-bold mb-2 text-primary">Consumentengedrag Quiz</h1>
         <p className="text-secondary text-lg mb-8">
-          Test your knowledge about economic decision-making and consumer psychology
+          Test je kennis over economische besluitvorming en consumentenpsychologie
         </p>
       </motion.div>
       
@@ -31,8 +31,8 @@ const QuizPage: React.FC = () => {
         transition={{ delay: 0.2 }}
       >
         <p className="text-dark">
-          Understanding how we make economic decisions can help us become more informed consumers and citizens. 
-          This quiz covers concepts from behavioral economics, consumer psychology, and health economics.
+          Begrijpen hoe we economische beslissingen nemen kan ons helpen om beter geïnformeerde consumenten en burgers te worden. 
+          Deze quiz behandelt concepten uit gedragseconomie, consumentenpsychologie en gezondheidseconomie.
         </p>
       </motion.div>
       
@@ -53,15 +53,15 @@ const QuizPage: React.FC = () => {
         animate="visible"
         transition={{ delay: 0.5 }}
       >
-        <h2 className="text-xl font-bold mb-4 text-primary">Why This Matters</h2>
+        <h2 className="text-xl font-bold mb-4 text-primary">Waarom Dit Belangrijk Is</h2>
         <p className="text-dark mb-4">
-          Many of our economic decisions happen automatically, influenced by environmental cues, social factors, 
-          and cognitive shortcuts we may not be aware of. By understanding these influences, we can make more 
-          intentional choices that align with our actual priorities and values.
+          Veel van onze economische beslissingen gebeuren automatisch, beïnvloed door omgevingsfactoren, sociale factoren,
+          en cognitieve shortcuts waarvan we ons mogelijk niet bewust zijn. Door deze invloeden te begrijpen, kunnen we meer
+          bewuste keuzes maken die aansluiten bij onze werkelijke prioriteiten en waarden.
         </p>
         <p className="text-dark">
-          The questions in this quiz highlight how our economic environment shapes our behavior—and how policy, 
-          design, and personal awareness can help create healthier and more sustainable outcomes.
+          De vragen in deze quiz benadrukken hoe onze economische omgeving ons gedrag vormt — en hoe beleid,
+          ontwerp en persoonlijk bewustzijn kunnen helpen bij het creëren van gezondere en duurzamere uitkomsten.
         </p>
       </motion.div>
     </motion.div>

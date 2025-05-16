@@ -22,7 +22,7 @@ const InterviewCard: React.FC<InterviewCardProps> = ({ interview }) => {
           <motion.img 
             src={interview.imageUrl} 
             alt={interview.title} 
-            className="w-full h-full object-cover"
+            className="absolute inset-0 w-full h-full object-cover object-[center_35%]"
             whileHover={{ scale: 1.05 }}
             transition={{ duration: 0.4 }}
           />

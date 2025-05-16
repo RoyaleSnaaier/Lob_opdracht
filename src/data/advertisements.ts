@@ -3,26 +3,26 @@ import { Advertisement } from '../types';
 export const advertisements: Advertisement[] = [
   {
     id: 1,
-    title: 'Financial Literacy for All',
-    description: 'A community initiative to bring financial education to schools and community centers across the country.',
+    title: 'Financiële Educatie voor Iedereen',
+    description: 'Een gemeenschapsinitiatief om financiële educatie naar scholen en buurtcentra in het hele land te brengen.',
     imageUrl: 'https://images.unsplash.com/photo-1589666564459-93cdd3ab856a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80'
   },
   {
     id: 2,
-    title: 'Sustainable Consumption Campaign',
-    description: 'Make choices that matter. Small decisions today create a better tomorrow for everyone.',
+    title: 'Duurzaam Consumeren Campagne',
+    description: 'Maak keuzes die ertoe doen. Kleine beslissingen vandaag creëren een betere toekomst voor iedereen.',
     imageUrl: 'https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80'
   },
   {
     id: 3,
-    title: 'Economic Health Summit 2023',
-    description: 'Join leading experts to explore the intersection of economic policy and public health outcomes.',
+    title: 'Economische Gezondheid Summit 2023',
+    description: 'Sluit je aan bij toonaangevende experts om de relatie tussen economisch beleid en volksgezondheid te verkennen.',
     imageUrl: 'https://images.unsplash.com/photo-1475721027785-f74eccf877e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80'
   },
   {
     id: 4,
-    title: 'Community Investment Fund',
-    description: 'Supporting local businesses and entrepreneurs who prioritize social and environmental impact.',
+    title: 'Gemeenschaps Investeringsfonds',
+    description: 'Ondersteuning van lokale bedrijven en ondernemers die prioriteit geven aan sociale en milieu-impact.',
     imageUrl: 'https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80'
   }
 ];

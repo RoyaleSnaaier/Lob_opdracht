@@ -1,9 +1,37 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import { motion } from 'framer-motion';
 import { references } from '../data/references';
+import { articles } from '../data/articles';
+import { healthArticles } from '../data/healthArticles';
 import { pageVariants, itemVariants } from '../animations';
 
-const ReferencesPage: React.FC = () => {
+const BronnenPagina: React.FC = () => {
+  // Verzamel alle artikelbronnen
+  const artikelBronnen = useMemo(() => {
+    const alleBronnen: Record<string, string[]> = {};
+    
+    // Verzamel bronnen van reguliere artikelen
+    articles.forEach(artikel => {
+      if (artikel.references && artikel.references.length > 0) {
+        alleBronnen[artikel.title] = artikel.references;
+      }
+    });
+    
+    // Verzamel bronnen van gezondheidsartikelen
+    healthArticles.forEach(artikel => {
+      if (artikel.references && artikel.references.length > 0) {
+        alleBronnen[artikel.title] = artikel.references;
+      }
+    });
+    
+    return alleBronnen;
+  }, []);
+
+  // Tel het totaal aantal bronnen
+  const totaalAantalBronnen = useMemo(() => {
+    return Object.values(artikelBronnen).reduce((total, refs) => total + refs.length, 0) + references.length;
+  }, [artikelBronnen]);
+
   return (
     <motion.div
       variants={pageVariants}
@@ -16,9 +44,9 @@ const ReferencesPage: React.FC = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
       >
-        <h1 className="text-3xl font-bold mb-2">References & Sources</h1>
+        <h1 className="text-3xl font-bold mb-2">Bronnen & Referenties</h1>
         <p className="text-gray-600 text-lg mb-8">
-          Academic studies and resources that inform our content
+          Wetenschappelijke studies en bronnen die onze inhoud onderbouwen
         </p>
       </motion.div>
       
@@ -28,14 +56,41 @@ const ReferencesPage: React.FC = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.2, duration: 0.5 }}
       >
-        <h2 className="text-xl font-bold mb-4">About Our Sources</h2>
+        <h2 className="text-xl font-bold mb-4">Over Onze Bronnen</h2>
         <p className="text-gray-700">
-          At EconoZen, we're committed to evidence-based content that accurately represents current research. 
-          Our articles and features draw from peer-reviewed academic studies, government data, and reports 
-          from reputable organizations. Below you'll find the key references that inform our work.
+          Bij onze LOB-opdracht over economisch burgerschap zijn we toegewijd aan het leveren van 
+          evidence-based content dat de huidige onderzoeken accuraat weergeeft. 
+          Onze artikelen en kenmerken zijn gebaseerd op peer-reviewed academische studies, 
+          overheidsgegevens en rapporten van gerenommeerde organisaties. 
+          In totaal hebben we {totaalAantalBronnen} bronnen gebruikt in dit project.
         </p>
       </motion.div>
       
+      {/* Bronnen per artikel */}
+      <h2 className="text-2xl font-bold mb-4">Bronnen per Artikel</h2>
+      <div className="space-y-6 mb-10">
+        {Object.entries(artikelBronnen).map(([titel, bronnen], index) => (
+          <motion.div 
+            key={`artikel-${index}`} 
+            className="bg-white rounded-lg shadow-md p-6"
+            variants={itemVariants}
+            initial="initial"
+            animate="animate"
+            custom={index}
+            transition={{ delay: 0.1 + index * 0.1 }}
+          >
+            <h3 className="text-lg font-bold mb-2">{titel}</h3>
+            <ul className="list-disc pl-5 space-y-1">
+              {bronnen.map((bron, bIndex) => (
+                <li key={bIndex} className="text-gray-700 text-sm">{bron}</li>
+              ))}
+            </ul>
+          </motion.div>
+        ))}
+      </div>
+      
+      {/* Andere referenties */}
+      <h2 className="text-2xl font-bold mb-4">Algemene Bronnen</h2>
       <div className="space-y-6">
         {references.map((ref, index) => (
           <motion.div 
@@ -63,7 +118,7 @@ const ReferencesPage: React.FC = () => {
                 whileHover={{ x: 5 }}
                 transition={{ type: "spring", stiffness: 400 }}
               >
-                View source
+                Bekijk bron
                 <motion.svg 
                   className="w-4 h-4 ml-1" 
                   fill="none" 
@@ -87,12 +142,12 @@ const ReferencesPage: React.FC = () => {
         animate={{ opacity: 1 }}
         transition={{ delay: 0.8, duration: 0.6 }}
       >
-        <h2 className="text-xl font-bold mb-4">Suggest a Source</h2>
+        <h2 className="text-xl font-bold mb-4">Contact voor Bronnen</h2>
         <p className="text-gray-700 mb-4">
-          We're always looking to expand our reference library. If you know of relevant research or 
-          resources that could enhance our coverage of economic citizenship, please email us at
-          <a href="mailto:research@econozen.com" className="text-accent hover:underline ml-1">
-            research@econozen.com
+          Voor vragen over onze bronnen of suggesties voor aanvullend onderzoek, 
+          kunt u contact opnemen via onze docenten of direct met ons via 
+          <a href="mailto:lob-project@studenten.rocmn.nl" className="text-accent hover:underline ml-1">
+            lob-project@studenten.rocmn.nl
           </a>.
         </p>
       </motion.div>
@@ -100,4 +155,4 @@ const ReferencesPage: React.FC = () => {
   );
 };
 
-export default ReferencesPage;
+export default BronnenPagina;

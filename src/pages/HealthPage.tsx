@@ -7,20 +7,20 @@ import { healthArticles } from '../data/healthArticles';
 import { healthTips } from '../data/healthTips';
 import { pageVariants, fadeInUpVariants } from '../animations';
 
-const HealthPage: React.FC = () => {
-  const articlesControl = useAnimation();
+const GezondheidsPagina: React.FC = () => {
+  const artikelenControl = useAnimation();
   const tipsControl = useAnimation();
-  const summaryControl = useAnimation();
+  const samenvattingControl = useAnimation();
   
-  const [articlesRef, articlesInView] = useInView({ threshold: 0.1, triggerOnce: true });
+  const [artikelenRef, artikelenInView] = useInView({ threshold: 0.1, triggerOnce: true });
   const [tipsRef, tipsInView] = useInView({ threshold: 0.1, triggerOnce: true });
-  const [summaryRef, summaryInView] = useInView({ threshold: 0.1, triggerOnce: true });
+  const [samenvattingRef, samenvattingInView] = useInView({ threshold: 0.1, triggerOnce: true });
   
   useEffect(() => {
-    if (articlesInView) articlesControl.start("visible");
+    if (artikelenInView) artikelenControl.start("visible");
     if (tipsInView) tipsControl.start("visible");
-    if (summaryInView) summaryControl.start("visible");
-  }, [articlesControl, tipsControl, summaryControl, articlesInView, tipsInView, summaryInView]);
+    if (samenvattingInView) samenvattingControl.start("visible");
+  }, [artikelenControl, tipsControl, samenvattingControl, artikelenInView, tipsInView, samenvattingInView]);
 
   return (
     <motion.div
@@ -34,29 +34,43 @@ const HealthPage: React.FC = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
       >
-        <h1 className="text-3xl font-bold mb-2">Health & Vitality</h1>
+        <h1 className="text-3xl font-bold mb-2">Gezondheid & Vitaliteit</h1>
         <p className="text-gray-600 text-lg mb-8">
-          Exploring the economic dimensions of health and well-being
+          Een verkenning van de economische dimensies van gezondheid en welzijn
         </p>
       </motion.div>
       
       <motion.section 
-        ref={articlesRef}
+        ref={artikelenRef}
         variants={fadeInUpVariants}
         initial="hidden"
-        animate={articlesControl}
+        animate={artikelenControl}
         className="mb-12"
       >
-        <h2 className="text-2xl font-bold mb-6">Featured Health Articles</h2>
+        <h2 className="text-2xl font-bold mb-6">Uitgelichte Gezondheidsartikelen</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {healthArticles.map((article, index) => (
+          {healthArticles.map((artikel, index) => (
             <motion.div
-              key={article.id}
+              key={artikel.id}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.2, duration: 0.5 }}
+              className="flex flex-col h-full"
             >
-              <ArticleCard article={article} />
+              <ArticleCard article={artikel} />
+              {artikel.references && (
+                <div className="mt-3 text-xs text-gray-500">
+                  <p className="font-semibold mb-1">Bronnen:</p>
+                  <ul className="list-disc pl-4">
+                    {artikel.references.slice(0, 2).map((ref, i) => (
+                      <li key={i} className="mb-1">{ref}</li>
+                    ))}
+                    {artikel.references.length > 2 && (
+                      <li className="italic">en {artikel.references.length - 2} meer...</li>
+                    )}
+                  </ul>
+                </div>
+              )}
             </motion.div>
           ))}
         </div>
@@ -68,9 +82,9 @@ const HealthPage: React.FC = () => {
         initial="hidden"
         animate={tipsControl}
       >
-        <h2 className="text-2xl font-bold mb-6">Healthy Lifestyle Tips</h2>
+        <h2 className="text-2xl font-bold mb-6">Gezonde Leefstijl Tips</h2>
         <p className="text-gray-700 mb-6">
-          Incorporate these practical tips into your daily routine to improve your health without breaking the bank.
+          Integreer deze praktische tips in je dagelijkse routine om je gezondheid te verbeteren zonder je budget te belasten.
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {healthTips.map((tip, index) => (
@@ -80,24 +94,31 @@ const HealthPage: React.FC = () => {
       </motion.section>
       
       <motion.section
-        ref={summaryRef}
+        ref={samenvattingRef}
         variants={fadeInUpVariants}
         initial="hidden"
-        animate={summaryControl}
+        animate={samenvattingControl}
         className="mt-12 bg-blue-50 p-6 rounded-lg"
       >
-        <h2 className="text-2xl font-bold mb-4">The Economic Value of Good Health</h2>
+        <h2 className="text-2xl font-bold mb-4">De Economische Waarde van Goede Gezondheid</h2>
         <p className="text-gray-700 mb-4">
-          Investing in your health today can save significant healthcare costs in the future. Studies show that every 
-          dollar spent on preventive health measures can save up to $5-7 in future healthcare costs.
+          Investeren in je gezondheid vandaag kan aanzienlijke zorgkosten in de toekomst besparen. Studies tonen aan dat elke euro besteed aan 
+          preventieve gezondheidsmaatregelen tot €5-7 kan besparen aan toekomstige zorgkosten.
         </p>
         <p className="text-gray-700">
-          Moreover, maintaining good health allows for greater workforce participation, higher productivity, and
-          a better quality of life—all of which have substantial economic benefits both individually and collectively.
+          Bovendien zorgt het behouden van een goede gezondheid voor grotere arbeidsparticipatie, hogere productiviteit en een betere 
+          levenskwaliteit—allemaal met substantiële economische voordelen, zowel individueel als collectief.
         </p>
+        <div className="mt-4 text-sm text-gray-600">
+          <p className="font-semibold">Bronnen:</p>
+          <ul className="list-disc pl-6 mt-1">
+            <li>RIVM. (2022). Preventie en zorgkosten: Economische analyses. Rijksinstituut voor Volksgezondheid en Milieu.</li>
+            <li>CBS. (2022). Gezondheid en economische participatie: Statistische verbanden. Centraal Bureau voor de Statistiek.</li>
+          </ul>
+        </div>
       </motion.section>
     </motion.div>
   );
 };
 
-export default HealthPage;
+export default GezondheidsPagina;
