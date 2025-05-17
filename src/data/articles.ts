@@ -1,7 +1,5 @@
 import { Article } from '../types';
 import { healthArticles } from './healthArticles';
-// Importeer de recensies
-import { reviews } from './reviews';
 
 export const articles: Article[] = [
     {
@@ -12,7 +10,7 @@ export const articles: Article[] = [
       "author": "Ingus",
       "date": "2025-03-21",
       "imageUrl": "https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80",
-      "category": "economie",
+      "category": "economy",
       "tags": ["technologie", "arbeidsmarkt", "innovatie"],
       "references": [
         "Brynjolfsson, E., & McAfee, A. (2014). The second machine age: Work, progress, and prosperity in a time of brilliant technologies. W. W. Norton & Company.",
@@ -27,7 +25,7 @@ export const articles: Article[] = [
       "author": "Cinas",
       "date": "2025-03-21",
       "imageUrl": "https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80",
-      "category": "economie",
+      "category": "economy",
       "tags": ["duurzaamheid", "circulaire economie", "groei"],
       "references": [
         "Ellen MacArthur Foundation. (2019). Completing the picture: How the circular economy tackles climate change. Ellen MacArthur Foundation.",
@@ -201,14 +199,5 @@ Van Dooren, C., & Seves, A. (2022). Economische impact van gezonde voedingskeuze
         'TNO. (2022). Voeding, arbeidsproductiviteit en economische output: Correlaties en causale verbanden. TNO Rapport 2022-018.',
         'Van Dooren, C., & Seves, A. (2022). Economische impact van gezonde voedingskeuzes: Een nationale analyse. Wageningen University & Research.'
       ]
-    },
-  
-    // Voeg recensies toe aan reguliere artikelen
-    ...reviews
+    }
 ];
-
-// Zorg ervoor dat economie-artikelen de juiste categorie hebben
-const economieArtikel = articles.find(a => a.id === 1);
-if (economieArtikel && economieArtikel.category.toLowerCase() !== 'economie') {
-  economieArtikel.category = 'economie'; // Corrigeer naar consistente spelling
-}

@@ -6,9 +6,9 @@ export interface Article {
   author: string;
   date: string;
   imageUrl?: string;
-  category: 'economy' | 'health' | 'research';
+  category: string;
   tags?: string[];
-  references?: string[]; // Added references array for APA citations
+  references?: string[];
 }
 
 export interface Interview {
@@ -28,6 +28,8 @@ export interface Advertisement {
   title: string;
   description: string;
   imageUrl: string;
+  url?: string;
+  linkText?: string;
 }
 
 export interface Comment {
@@ -37,6 +39,7 @@ export interface Comment {
   date: string;
   articleId?: number;
   interviewId?: number;
+  replies?: Comment[];
 }
 
 export interface QuizQuestion {
@@ -45,6 +48,8 @@ export interface QuizQuestion {
   options: string[];
   correctAnswerIndex: number;
   explanation: string;
+  category?: string;
+  difficulty?: 'easy' | 'medium' | 'hard';
 }
 
 export interface HealthTip {
@@ -62,4 +67,6 @@ export interface StudyReference {
   source: string;
   url?: string;
   description: string;
+  category?: string;
+  type?: 'article' | 'book' | 'website' | 'report';
 }

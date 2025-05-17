@@ -7,20 +7,20 @@ import { healthArticles } from '../data/healthArticles';
 import { healthTips } from '../data/healthTips';
 import { pageVariants, fadeInUpVariants } from '../animations';
 
-const GezondheidsPagina: React.FC = () => {
-  const artikelenControl = useAnimation();
+const HealthPage: React.FC = () => {
+  const articlesControl = useAnimation();
   const tipsControl = useAnimation();
-  const samenvattingControl = useAnimation();
+  const summaryControl = useAnimation();
   
-  const [artikelenRef, artikelenInView] = useInView({ threshold: 0.1, triggerOnce: true });
+  const [articlesRef, articlesInView] = useInView({ threshold: 0.1, triggerOnce: true });
   const [tipsRef, tipsInView] = useInView({ threshold: 0.1, triggerOnce: true });
-  const [samenvattingRef, samenvattingInView] = useInView({ threshold: 0.1, triggerOnce: true });
+  const [summaryRef, summaryInView] = useInView({ threshold: 0.1, triggerOnce: true });
   
   useEffect(() => {
-    if (artikelenInView) artikelenControl.start("visible");
+    if (articlesInView) articlesControl.start("visible");
     if (tipsInView) tipsControl.start("visible");
-    if (samenvattingInView) samenvattingControl.start("visible");
-  }, [artikelenControl, tipsControl, samenvattingControl, artikelenInView, tipsInView, samenvattingInView]);
+    if (summaryInView) summaryControl.start("visible");
+  }, [articlesControl, tipsControl, summaryControl, articlesInView, tipsInView, summaryInView]);
 
   return (
     <motion.div
@@ -41,32 +41,32 @@ const GezondheidsPagina: React.FC = () => {
       </motion.div>
       
       <motion.section 
-        ref={artikelenRef}
+        ref={articlesRef}
         variants={fadeInUpVariants}
         initial="hidden"
-        animate={artikelenControl}
+        animate={articlesControl}
         className="mb-12"
       >
         <h2 className="text-2xl font-bold mb-6">Uitgelichte Gezondheidsartikelen</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {healthArticles.map((artikel, index) => (
+          {healthArticles.map((article, index) => (
             <motion.div
-              key={artikel.id}
+              key={article.id}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.2, duration: 0.5 }}
               className="flex flex-col h-full"
             >
-              <ArticleCard article={artikel} />
-              {artikel.references && (
+              <ArticleCard article={article} />
+              {article.references && (
                 <div className="mt-3 text-xs text-gray-500">
                   <p className="font-semibold mb-1">Bronnen:</p>
                   <ul className="list-disc pl-4">
-                    {artikel.references.slice(0, 2).map((ref, i) => (
+                    {article.references.slice(0, 2).map((ref, i) => (
                       <li key={i} className="mb-1">{ref}</li>
                     ))}
-                    {artikel.references.length > 2 && (
-                      <li className="italic">en {artikel.references.length - 2} meer...</li>
+                    {article.references.length > 2 && (
+                      <li className="italic">en {article.references.length - 2} meer...</li>
                     )}
                   </ul>
                 </div>
@@ -94,10 +94,10 @@ const GezondheidsPagina: React.FC = () => {
       </motion.section>
       
       <motion.section
-        ref={samenvattingRef}
+        ref={summaryRef}
         variants={fadeInUpVariants}
         initial="hidden"
-        animate={samenvattingControl}
+        animate={summaryControl}
         className="mt-12 bg-blue-50 p-6 rounded-lg"
       >
         <h2 className="text-2xl font-bold mb-4">De Economische Waarde van Goede Gezondheid</h2>
@@ -121,4 +121,4 @@ const GezondheidsPagina: React.FC = () => {
   );
 };
 
-export default GezondheidsPagina;
+export default HealthPage;

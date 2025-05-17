@@ -46,26 +46,26 @@ De economische voordelen van sport zijn aanzienlijk en divers, van individuele z
 
 ### Bronvermelding
 
-CBS. (2022). De economische betekenis van sport in Nederland. https://www.cbs.nl/nl-nl/maatwerk/2022/30/de-economische-betekenis-van-sport-in-nederland-2019
+CBS. (2022). De economische betekenis van sport in Nederland. Centraal Bureau voor de Statistiek.
 
-RIVM. (2022). Gezondheidseffecten van bewegen. https://www.rivm.nl/bewegen/gezondheidseffecten-van-bewegen
+RIVM. (2022). Gezondheidseffecten van bewegen. Rijksinstituut voor Volksgezondheid en Milieu.
 
-Sociaal en Cultureel Planbureau. (2021). De sociale staat van Nederland: Sport en bewegen. https://digitaal.scp.nl/ssn2020/vrije-tijd/
+Sociaal en Cultureel Planbureau. (2021). De sociale staat van Nederland: Sport en bewegen. SCP.
 
-Sporteconomie Nederland. (2022). Economische impact van sportdeelname in Nederland. https://www.kenniscentrumsportenbewegen.nl/producten/sporteconomie/
+Sporteconomie Nederland. (2022). Economische impact van sportdeelname in Nederland. SEO Economisch Onderzoek.
 
-TNO. (2021). Vitaliteit op de werkvloer: De impact van sportbeoefening op arbeidsproductiviteit. https://www.tno.nl/nl/gezond-veilig/gezond-langer-werken/vitaliteit/`,
+TNO. (2021). Vitaliteit op de werkvloer: De impact van sportbeoefening op arbeidsproductiviteit. TNO.`,
     author: 'Dr. Ingmar van Rheenen',
     date: '2023-11-05',
     imageUrl: 'https://images.unsplash.com/photo-1517649763962-0c623066013b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80',
     category: 'gezondheid',
     tags: ['sport', 'economie', 'gezondheid', 'productiviteit'],
     references: [
-      'CBS. (2022). De economische betekenis van sport in Nederland. https://www.cbs.nl/nl-nl/maatwerk/2022/30/de-economische-betekenis-van-sport-in-nederland-2019',
-      'RIVM. (2022). Gezondheidseffecten van bewegen. https://www.rivm.nl/bewegen/gezondheidseffecten-van-bewegen',
-      'Sociaal en Cultureel Planbureau. (2021). De sociale staat van Nederland: Sport en bewegen. https://digitaal.scp.nl/ssn2020/vrije-tijd/',
-      'Sporteconomie Nederland. (2022). Economische impact van sportdeelname in Nederland. https://www.kenniscentrumsportenbewegen.nl/producten/sporteconomie/',
-      'TNO. (2021). Vitaliteit op de werkvloer: De impact van sportbeoefening op arbeidsproductiviteit. https://www.tno.nl/nl/gezond-veilig/gezond-langer-werken/vitaliteit/'
+      'CBS. (2022). De economische betekenis van sport in Nederland. Centraal Bureau voor de Statistiek.',
+      'RIVM. (2022). Gezondheidseffecten van bewegen. Rijksinstituut voor Volksgezondheid en Milieu.',
+      'Sociaal en Cultureel Planbureau. (2021). De sociale staat van Nederland: Sport en bewegen. SCP.',
+      'Sporteconomie Nederland. (2022). Economische impact van sportdeelname in Nederland. SEO Economisch Onderzoek.',
+      'TNO. (2021). Vitaliteit op de werkvloer: De impact van sportbeoefening op arbeidsproductiviteit. TNO.'
     ]
   },
   {
@@ -114,23 +114,23 @@ Deze verschuivingen weerspiegelen een meer individuele benadering van financiën
 
 ### Bronvermelding
 
-CBS. (2022). Arbeidsparticipatie en inkomen naar relatiepatronen. https://www.cbs.nl/nl-nl/maatwerk/2022/26/arbeidsdeelname-paren-2021
+CBS. (2022). Arbeidsparticipatie en inkomen naar relatiepatronen. Centraal Bureau voor de Statistiek.
 
-Janssen, M. (2022). Financiële compatibiliteit en relatietevredenheid. https://www.ru.nl/fsw/onderzoek/publicaties/
+Janssen, M. (2022). Financiële compatibiliteit en relatietevredenheid. Radboud Universiteit Nijmegen.
 
-Nibud. (2022). Budgetonderzoek: Woonlasten en huishoudelijke uitgaven naar huishoudtype. https://www.nibud.nl/onderzoeksrapporten/
+Nibud. (2022). Budgetonderzoek: Woonlasten en huishoudelijke uitgaven naar huishoudtype. Nationaal Instituut voor Budgetvoorlichting.
 
-Van Dijk, S., Meeuwesen, L., & De Graaf, P. (2021). Economische veerkracht tijdens de COVID-19 pandemie: De rol van relatieverbanden. https://www.uva.nl/disciplines/economie/onderzoek/`,
+Van Dijk, S., Meeuwesen, L., & De Graaf, P. (2021). Economische veerkracht tijdens de COVID-19 pandemie: De rol van relatieverbanden. Universiteit van Amsterdam.`,
     author: 'Prof. Cinan van de Pol',
     date: '2023-10-28',
     imageUrl: 'https://images.unsplash.com/photo-1529502669403-c073b74fcefb?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80',
     category: 'gezondheid',
     tags: ['relaties', 'financiën', 'economisch welzijn'],
     references: [
-      'CBS. (2022). Arbeidsparticipatie en inkomen naar relatiepatronen. https://www.cbs.nl/nl-nl/maatwerk/2022/26/arbeidsdeelname-paren-2021',
-      'Janssen, M. (2022). Financiële compatibiliteit en relatietevredenheid. https://www.ru.nl/fsw/onderzoek/publicaties/',
-      'Nibud. (2022). Budgetonderzoek: Woonlasten en huishoudelijke uitgaven naar huishoudtype. https://www.nibud.nl/onderzoeksrapporten/',
-      'Van Dijk, S., Meeuwesen, L., & De Graaf, P. (2021). Economische veerkracht tijdens de COVID-19 pandemie: De rol van relatieverbanden. https://www.uva.nl/disciplines/economie/onderzoek/'
+      'CBS. (2022). Arbeidsparticipatie en inkomen naar relatiepatronen. Centraal Bureau voor de Statistiek.',
+      'Janssen, M. (2022). Financiële compatibiliteit en relatietevredenheid. Radboud Universiteit Nijmegen.',
+      'Nibud. (2022). Budgetonderzoek: Woonlasten en huishoudelijke uitgaven naar huishoudtype. Nationaal Instituut voor Budgetvoorlichting.',
+      'Van Dijk, S., Meeuwesen, L., & De Graaf, P. (2021). Economische veerkracht tijdens de COVID-19 pandemie: De rol van relatieverbanden. Universiteit van Amsterdam.'
     ]
   }
 ];
